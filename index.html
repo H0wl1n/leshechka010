@@ -19,11 +19,11 @@ body{
   background:var(--bg);
   color:var(--dark);
 }
-section{
-  padding:80px 20px;
-}
+section{padding:80px 20px}
 header{
-  background:linear-gradient(135deg,#020617,#0f172a);
+  background:
+    linear-gradient(135deg,rgba(2,6,23,.8),rgba(15,23,42,.8)),
+    url('https://images.unsplash.com/photo-1554284126-aa88f22d8b74?auto=format&fit=crop&w=1600&q=80') center/cover;
   color:#fff;
   text-align:center;
 }
@@ -60,9 +60,15 @@ p{color:var(--gray);font-size:18px}
   font-weight:600;
 }
 
-.stats .card{
-  font-size:22px;
+.card img{
+  width:100%;
+  height:160px;
+  object-fit:cover;
+  border-radius:14px;
+  margin-bottom:16px;
 }
+
+.stats .card{font-size:22px}
 
 footer{
   background:#020617;
@@ -77,7 +83,7 @@ footer{
 <header>
   <section>
     <h1>FitLife</h1>
-    <p>Онлайн-фитнес для дома и зала</p><br>
+    <p style="color:#cbd5f5">Онлайн-фитнес для дома и зала</p><br>
     <a class="btn" href="#plans">Начать</a>
   </section>
 </header>
@@ -85,9 +91,18 @@ footer{
 <section>
   <h2 align="center">Как это работает</h2>
   <div class="grid">
-    <div class="card">Выбираешь программу</div>
-    <div class="card">Тренируешься онлайн</div>
-    <div class="card">Получаешь результат</div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1599058917212-d750089bc07e?auto=format&fit=crop&w=800&q=80">
+      Выбираешь программу
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=800&q=80">
+      Тренируешься онлайн
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1549576490-b0b4831ef60a?auto=format&fit=crop&w=800&q=80">
+      Получаешь результат
+    </div>
   </div>
 </section>
 
@@ -102,9 +117,36 @@ footer{
 <section id="plans">
   <h2 align="center">Тарифы</h2>
   <div class="grid">
-    <div class="card">Базовый</div>
-    <div class="card">Про</div>
-    <div class="card">Премиум</div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1579758629938-03607ccdbaba?auto=format&fit=crop&w=800&q=80">
+      Базовый
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=800&q=80">
+      Про
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1605296867304-46d5465a13f1?auto=format&fit=crop&w=800&q=80">
+      Премиум
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2 align="center">Отзывы</h2>
+  <div class="grid">
+    <div class="card">⭐️⭐️⭐️⭐️⭐️<br>Анна: Минус 8 кг за 3 месяца</div>
+    <div class="card">⭐️⭐️⭐️⭐️⭐️<br>Игорь: Набрал мышечную массу</div>
+    <div class="card">⭐️⭐️⭐️⭐️⭐️<br>Мария: Тренируюсь дома</div>
+  </div>
+</section>
+
+<section>
+  <h2 align="center">Частые вопросы</h2>
+  <div class="grid">
+    <div class="card">❓ Подойдет ли новичкам?<br><small>Да, есть программы с нуля</small></div>
+    <div class="card">❓ Нужен ли инвентарь?<br><small>Нет, можно без оборудования</small></div>
+    <div class="card">❓ Сколько времени тренировка?<br><small>20–45 минут</small></div>
   </div>
 </section>
 
