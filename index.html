@@ -1,35 +1,90 @@
-<!-- ================= VARIANT 1 ================= -->
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FitLife — Фитнес онлайн</title>
-  <style>
-    body { margin:0; font-family: Arial, sans-serif; background:#f9fafb; color:#111; }
-    section { min-height:100vh; padding:70px 20px; }
-    header { background:#111827; color:#fff; text-align:center; }
-    h1 { font-size:48px; }
-    .btn { padding:14px 26px; background:#22c55e; color:#fff; border-radius:8px; text-decoration:none; }
-    .steps, .plans, .stats { display:grid; gap:20px; max-width:1000px; margin:auto; }
-    .steps { grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); }
-    .card { background:#fff; padding:24px; border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,.05); }
-    footer { background:#111827; color:#9ca3af; text-align:center; padding:20px; }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FitLife — Фитнес онлайн</title>
+<style>
+:root{
+  --bg:#f8fafc;
+  --dark:#0f172a;
+  --gray:#64748b;
+  --green:#22c55e;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:system-ui,-apple-system,Segoe UI,sans-serif;
+  background:var(--bg);
+  color:var(--dark);
+}
+section{
+  padding:80px 20px;
+}
+header{
+  background:linear-gradient(135deg,#020617,#0f172a);
+  color:#fff;
+  text-align:center;
+}
+h1{font-size:52px;margin-bottom:10px}
+h2{font-size:32px;margin-bottom:40px}
+p{color:var(--gray);font-size:18px}
+
+.btn{
+  display:inline-block;
+  padding:14px 32px;
+  background:var(--green);
+  color:#fff;
+  border-radius:999px;
+  text-decoration:none;
+  font-weight:600;
+  transition:.3s;
+}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 25px rgba(34,197,94,.4)}
+
+.grid{
+  max-width:1100px;
+  margin:auto;
+  display:grid;
+  gap:24px;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+}
+
+.card{
+  background:#fff;
+  padding:28px;
+  border-radius:18px;
+  box-shadow:0 10px 30px rgba(15,23,42,.08);
+  text-align:center;
+  font-weight:600;
+}
+
+.stats .card{
+  font-size:22px;
+}
+
+footer{
+  background:#020617;
+  color:#94a3b8;
+  text-align:center;
+  padding:24px;
+}
+</style>
 </head>
 <body>
 
 <header>
   <section>
     <h1>FitLife</h1>
-    <p>Онлайн-фитнес для дома и зала</p>
+    <p>Онлайн-фитнес для дома и зала</p><br>
     <a class="btn" href="#plans">Начать</a>
   </section>
 </header>
 
 <section>
   <h2 align="center">Как это работает</h2>
-  <div class="steps">
+  <div class="grid">
     <div class="card">Выбираешь программу</div>
     <div class="card">Тренируешься онлайн</div>
     <div class="card">Получаешь результат</div>
@@ -37,93 +92,27 @@
 </section>
 
 <section class="stats">
-  <div class="card">5000+ учеников</div>
-  <div class="card">120 тренировок</div>
-  <div class="card">24/7 доступ</div>
+  <div class="grid">
+    <div class="card">🏆 5000+ учеников</div>
+    <div class="card">💪 120 тренировок</div>
+    <div class="card">⏱ 24/7 доступ</div>
+  </div>
 </section>
 
 <section id="plans">
   <h2 align="center">Тарифы</h2>
-  <div class="plans steps">
+  <div class="grid">
     <div class="card">Базовый</div>
     <div class="card">Про</div>
     <div class="card">Премиум</div>
   </div>
 </section>
 
-<section>
-  <h2 align="center">Начни сегодня</h2>
-  <p align="center"><a class="btn" href="#">Записаться</a></p>
+<section align="center">
+  <h2>Начни сегодня</h2>
+  <a class="btn" href="#">Записаться</a>
 </section>
 
 <footer>© 2025 FitLife</footer>
-</body>
-</html>
-
-
-<!-- ================= VARIANT 2 ================= -->
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>EventPro — Мероприятия</title>
-  <style>
-    body { margin:0; font-family: system-ui; background:#0f172a; color:#e5e7eb; }
-    nav { position:fixed; top:0; width:100%; background:#020617; padding:16px; text-align:center; }
-    nav a { color:#38bdf8; margin:0 12px; text-decoration:none; }
-    section { min-height:100vh; padding:100px 24px 60px; }
-    .hero { background:linear-gradient(135deg,#0ea5e9,#6366f1); color:#020617; }
-    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:24px; }
-    .box { background:#020617; padding:24px; border-radius:16px; }
-    .cta { text-align:center; background:#020617; }
-  </style>
-</head>
-<body>
-
-<nav>
-  <a href="#about">О нас</a>
-  <a href="#events">События</a>
-  <a href="#team">Команда</a>
-  <a href="#cta">Контакты</a>
-</nav>
-
-<section class="hero">
-  <h1>EventPro</h1>
-  <p>Организация онлайн и офлайн мероприятий</p>
-</section>
-
-<section id="about">
-  <h2>Почему мы</h2>
-  <div class="grid">
-    <div class="box">Опыт 10 лет</div>
-    <div class="box">Полный цикл</div>
-    <div class="box">Любой формат</div>
-  </div>
-</section>
-
-<section id="events">
-  <h2>Наши события</h2>
-  <div class="grid">
-    <div class="box">Конференции</div>
-    <div class="box">Форумы</div>
-    <div class="box">Митапы</div>
-  </div>
-</section>
-
-<section id="team">
-  <h2>Команда</h2>
-  <div class="grid">
-    <div class="box">Продюсер</div>
-    <div class="box">Дизайнер</div>
-    <div class="box">Координатор</div>
-  </div>
-</section>
-
-<section class="cta" id="cta">
-  <h2>Связаться с нами</h2>
-  <p>eventpro@email.com</p>
-</section>
-
 </body>
 </html>
